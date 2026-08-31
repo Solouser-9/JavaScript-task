@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DOM Manipulation Demo</h1>
+        <p class="intro">Every section below is modified by DOM.js the moment the page
+           loads. Open the console (F12) to see the console.log() outputs.</p>
+    </header>
+
+    <main>
+
+        <!-- 1 — instantly deleted by: elementToDelete.remove() -->
+        <section>
+            <h2>1 · The vanishing div</h2>
+            <div id="deleteMe">Please delete this</div>
+            <p class="note">You'll never see this one — the script removes it before the page
+               even paints. Comment out the .remove() line to watch it appear.</p>
+        </section>
+
+        <!-- 2 — filled by: contentDiv.innerHTML = "..." -->
+        <section>
+            <h2>2 · Filled with innerHTML</h2>
+            <div id="content"></div>
+        </section>
+
+        <!-- 3 — read by: inputField.value -->
+        <section>
+            <h2>3 · Reading an input value</h2>
+            <input id="userInput" type="text" value="Hello World">
+            <p class="note">"Hello World" gets logged to the console.</p>
+        </section>
+
+        <!-- 4 — class toggled by: darkBtn.classList.toggle("dark-theme") -->
+        <section>
+            <h2>4 · Class toggling</h2>
+            <button id="darkModeBtn">Dark Mode</button>
+            <p class="note">The script toggles the class once on load, so the button
+               starts in its dark state.</p>
+        </section>
+
+        <!-- 5 — traversed by: firstElementChild / parentElement -->
+        <section>
+            <h2>5 · Parent &amp; child traversal</h2>
+            <div id="parent"><span id="child">Hi</span></div>
+            <p class="note">The script grabs the span from inside the div, then climbs
+               back up — both IDs print to the console.</p>
+        </section>
+
+        <!-- 6 — modified by: myList.insertBefore() -->
+        <section>
+            <h2>6 · Inserting before</h2>
+            <ul id="myList">
+                <li>Second</li>
+            </ul>
+            <p class="note">A new "First" item is inserted above "Second".</p>
+        </section>
+
+        <!-- 7 — cloned by: originalP.cloneNode(true) -->
+        <section>
+            <h2>7 · The clone</h2>
+            <p id="original">Copy me!</p>
+        </section>
+
+        <!-- 8 — new elements land at the very END of <body> -->
+        <section>
+            <h2>8 · Appended to the body</h2>
+            <p class="note">Keep scrolling — the new paragraph and the cloned paragraph
+               appear right below here, because appendChild() always adds to the end
+               of the body.</p>
+        </section>
+
+    </main>
+
+    <!-- Keep the script at the END of the body so every element above
+         already exists by the time the script runs -->
+    <script src="DOM.js"></script>
+
+</body>
+</html>
