@@ -9,7 +9,7 @@ export const databaseConfig = {
   host: "localhost",
   port: 8080,
   username: "admin",
-  password: "secret123" // Don't put real passwords in frontend code!
+  password: "1234567890" // Don't put real passwords in frontend code!
 }
 
 // Exporting a math utility function
@@ -19,8 +19,8 @@ export function calculateCircleArea(radius) {
 
 // Exporting an array of objects (like mock database data)
 export const initialEmployees = [
-  { id: 1, name: "Alice", role: "Developer" },
-  { id: 2, name: "Bob", role: "Designer" }
+  { id: 1, name: "Destiny", role: "Developer" },
+  { id: 2, name: "Praise", role: "Designer" }
 ]
 
 // Exporting a class with a method
@@ -31,21 +31,21 @@ export class Car {
   }
   accelerate(amount) {
     this.speed += amount
-    console.log(`${this.brand} is going ${this.speed} mph`)
+    console.log(`${this.brand} is going ${this.speed} kmph`)
   }
 }
 
 // Renaming an export (aliasing)
 // Sometimes your internal variable name isn't what you want outsiders to use.
 // We can rename it during export. 'internalSecret' becomes 'apiKey' to the outside world.
-let internalSecret = "12345-abcde"
+let internalSecret = "I am a boy"
 export { internalSecret as apiKey }
 
 // Exporting a function that returns a Promise (mocking an API call)
 export function fetchUserData() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({ name: "John Doe", age: 34 })
+      resolve({ name: "Ajomale Isaac", age: 17 })
     }, 1000) // Simulates a 1-second network delay
   })
 }
