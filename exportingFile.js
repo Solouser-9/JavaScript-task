@@ -1,5 +1,4 @@
-// Welcome to the first exporting file! 
-// Think of this file as a toolbox. We are putting tools in here that other files can borrow.
+// I think of this file as a toolbox. We are putting tools in here that other files can borrow.
 
 // Exporting a boolean flag
 export const isMaintenanceMode = false
@@ -9,7 +8,7 @@ export const databaseConfig = {
   host: "localhost",
   port: 8080,
   username: "admin",
-  password: "1234567890" // Don't put real passwords in frontend code!
+  password: "1234567890" 
 }
 
 // Exporting a math utility function
