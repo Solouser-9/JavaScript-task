@@ -8,8 +8,8 @@ function createToggle() {
 }
 
 let lightSwitch = createToggle()
-console.log(lightSwitch()) // Prints "Light is ON"
-console.log(lightSwitch()) // Prints "Light is OFF"
+console.log(lightSwitch()) // Prints "The light is ON"
+console.log(lightSwitch()) // Prints "The light is OFF"
 
 // Closure generating IDs
 function createIdGenerator() {
@@ -67,9 +67,9 @@ function createListManager() {
 }
 
 let myList = createListManager()
-myList.add("Orange") // Prints "Added: Apple"
-myList.add("Cabbage") // Prints "Added: Banana"
-myList.print() // Prints "List: Apple, Banana"
+myList.add("Orange") // Prints "Added: Orange"
+myList.add("Cabbage") // Prints "Added: Cabbage"
+myList.print() // Prints "List: Apple, Cabbage"
 
 // Closure setting a volume limit
 function createVolumeControl(maxVolume) {
@@ -131,5 +131,5 @@ function createPasswordChecker(correctPassword) {
 }
 
 let checkLogin = createPasswordChecker("1234567890")
-checkLogin("password") // Prints "Wrong password!"
+checkLogin("password") // Prints "Wrong password!, F off🫩😤"
 checkLogin("1234567890") // Prints "Access granted!"
