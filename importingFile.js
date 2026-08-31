@@ -1,5 +1,5 @@
-// Now for the fun part. Let's start grabbing the tools we left in exporting_file_1.js
-// Notice we use the relative path "./" to point to the file in the same folder.
+// I am grabbing the tools we left in exportingFile.js
+// I use the relative path "./" to point to the file in the same folder.
 
 // Importing a boolean and using it in an if-statement
 import { isMaintenanceMode } from "./exportingFile.js"
@@ -61,6 +61,6 @@ myLogger.log("This is a test log message.")
 
 // Importing multiple small helpers at once and using them
 import { formatCurrency, formatPercentage } from "./exportingFile.js"
-let price = formatCurrency(100.00)      // Returns "$19.99"
+let price = formatCurrency(100.00)      // Returns "$100.00"
 let tax = formatPercentage(0.0825)     // Returns "8.3%"
 console.log(`Price: ${price} (Tax: ${tax})`)
