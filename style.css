@@ -1,0 +1,148 @@
+/* ---------- Page layout ---------- */
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef1f5;
+    color: #222;
+    max-width: 640px;
+    margin: 40px auto 60px;
+    padding: 0 16px;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+h1 { color: #1f2937; }
+.intro { color: #6b7280; }
+
+/* ---------- Demo cards ---------- */
+section {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+section > h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6b7280;
+    margin: 0 0 12px;
+}
+
+.note {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+/* ---------- 1 — the deleted div ---------- */
+#deleteMe {
+    background: #fee2e2;
+    border: 2px dashed #ef4444;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+    color: #991b1b;
+}
+
+/* ---------- 2 — where innerHTML injects an <h2> and <p> ---------- */
+#content {
+    background: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    padding: 14px 18px;
+}
+
+#content h2 { color: #1d4ed8; margin: 0 0 6px; }
+#content p  { margin: 0; color: #374151; }
+
+/* ---------- 3 — the input ---------- */
+#userInput {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+}
+
+#userInput:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* ---------- 4 — the dark mode button ---------- */
+#darkModeBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid #111;
+    border-radius: 6px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+}
+
+/* This is the state you'll see on load — the script adds this class */
+#darkModeBtn.dark-theme {
+    background: #111;
+    color: #fff;
+}
+
+/* ---------- 5 — parent & child ---------- */
+#parent {
+    background: #ecfdf5;
+    border: 2px solid #10b981;
+    border-radius: 6px;
+    padding: 14px 18px;
+}
+
+#child {
+    background: #10b981;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* ---------- 6 — the list ---------- */
+#myList {
+    background: #fffbeb;
+    border: 2px solid #f59e0b;
+    border-radius: 6px;
+    padding: 12px 12px 12px 40px;
+    margin: 0;
+}
+
+#myList li { margin: 6px 0; }
+
+/* ---------- 7 — the original paragraph ---------- */
+#original {
+    background: #f5f3ff;
+    border: 2px solid #8b5cf6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+/* ---------- 8 — elements appended directly to <body> ----------
+   The script's new paragraph has no id or class, so I target it with
+   the "direct child" selector: any <p> that is a direct child of body. */
+body > p {
+    background: #fff;
+    border: 2px dashed #10b981;
+    border-radius: 8px;
+    padding: 16px 22px;
+    margin: 0 0 18px;
+}
