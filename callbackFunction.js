@@ -39,7 +39,7 @@ findUser("Jerry", (err, user) => {
 // (Assuming HTML: <button id="myBtn">Click</button>)
 let btn = document.getElementById("myBtn")
 btn.addEventListener("click", function() {
-  console.log("You clicked this burron") // This function is a callback
+  console.log("You clicked this button") // This function is a callback
 })
 
 // Using reduce with a callback to sum an array
