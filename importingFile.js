@@ -28,8 +28,8 @@ initialEmployees.forEach(employee => {
 
 // Importing a class and calling its method
 import { Car } from "./exportingFile.js"
-let myCar = new Car("Toyota")
-myCar.accelerate(30) // Should print "Toyota is going 30 mph"
+let myCar = new Car("Bughatti")
+myCar.accelerate(300) // Should print "Bughatti is going 300 mph"
 
 // Importing a renamed export (aliasing on import)
 // Remember we exported 'internalSecret' as 'apiKey'. So we must import it as 'apiKey'.
@@ -47,7 +47,7 @@ fetchUserData().then(data => {
 // Importing an async function and using 'await' 
 // Note: To use 'await' at the top level like this, you must be in a module (which we are!)
 import { processPayment } from "./exportingFile.js"
-// We wrap it in an async function just to be safe with older environments
+// It is wrapped in an async function just to be safe with older environments
 async function checkout() {
   let result = await processPayment(50)
   console.log("Checkout result: " + result)
@@ -61,6 +61,6 @@ myLogger.log("This is a test log message.")
 
 // Importing multiple small helpers at once and using them
 import { formatCurrency, formatPercentage } from "./exportingFile.js"
-let price = formatCurrency(19.99)      // Returns "$19.99"
+let price = formatCurrency(100.00)      // Returns "$19.99"
 let tax = formatPercentage(0.0825)     // Returns "8.3%"
 console.log(`Price: ${price} (Tax: ${tax})`)
