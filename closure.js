@@ -3,7 +3,7 @@ function createToggle() {
   let isOn = false
   return function() {
     isOn = !isOn;
-    return isOn ? "Light is ON" : "Light is OFF"
+    return isOn ? "The light is ON" : "The light is OFF"
   }
 }
 
@@ -67,8 +67,8 @@ function createListManager() {
 }
 
 let myList = createListManager()
-myList.add("Apple") // Prints "Added: Apple"
-myList.add("Banana") // Prints "Added: Banana"
+myList.add("Orange") // Prints "Added: Apple"
+myList.add("Cabbage") // Prints "Added: Banana"
 myList.print() // Prints "List: Apple, Banana"
 
 // Closure setting a volume limit
@@ -83,8 +83,8 @@ function createVolumeControl(maxVolume) {
 }
 
 let tvVolume = createVolumeControl(10)
-tvVolume(5) // Prints "Volume: 5"
-tvVolume(10) // Prints "Volume: 10" (capped at max)
+tvVolume(13) // Prints "Volume: 5"
+tvVolume(70) // Prints "Volume: 10" (capped at max)
 
 // Closure with a filter function
 function createKeywordFilter(bannedWord) {
@@ -93,15 +93,15 @@ function createKeywordFilter(bannedWord) {
   }
 }
 
-let chatFilter = createKeywordFilter("badword")
-console.log(chatFilter("This is a badword day")) // Prints "This is a **** day"
+let chatFilter = createKeywordFilter("fuck")
+console.log(chatFilter("This is a fuck day")) // Prints "This is a **** day"
 
 // Closure tracking shopping cart total quantity
 function createCartTracker() {
   let totalItems = 0
   return function(quantityAdded) {
     totalItems += quantityAdded
-    console.log("Total items in cart: " + totalItems)
+    console.log("Total items in the cart: " + totalItems)
   }
 }
 
@@ -125,11 +125,11 @@ function createPasswordChecker(correctPassword) {
     if (enteredPassword === correctPassword) {
       console.log("Access granted!")
     } else {
-      console.log("Wrong password!")
+      console.log("Wrong password!, F off🫩😤")
     }
   }
 }
 
-let checkLogin = createPasswordChecker("secret123")
+let checkLogin = createPasswordChecker("1234567890")
 checkLogin("password") // Prints "Wrong password!"
-checkLogin("secret123") // Prints "Access granted!"
+checkLogin("1234567890") // Prints "Access granted!"
