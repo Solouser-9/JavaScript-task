@@ -21,7 +21,7 @@ step1(function() {
 })
 
 // Callback to find a specific item in an array
-let users = [{name: "Tom"}, {name: "Jerry"}]
+let users = [{name: "Destiny"}, {name: "Adnan"}]
 function findUser(name, callback) {
   let found = users.find(u => u.name === name)
   if (found) {
@@ -32,14 +32,14 @@ function findUser(name, callback) {
 }
 
 findUser("Jerry", (err, user) => {
-  if (!err) console.log("Found: " + user.name) // Prints "Found: Jerry"
+  if (!err) console.log("Found: " + user.name) // Prints "Found: Adnan"
 })
 
 // Callback for a simple DOM event
 // (Assuming HTML: <button id="myBtn">Click</button>)
 let btn = document.getElementById("myBtn")
 btn.addEventListener("click", function() {
-  console.log("Button was clicked!") // This function is a callback
+  console.log("You clicked this burron") // This function is a callback
 })
 
 // Using reduce with a callback to sum an array
@@ -65,7 +65,7 @@ function withdrawMoney(amount, checkBalanceCallback) {
   if (sufficientFunds) {
     console.log("Dispensing $" + amount)
   } else {
-    console.log("Insufficient funds")
+    console.log("You're broke 😭✌️")
   }
 }
 
